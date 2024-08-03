@@ -224,7 +224,7 @@ function addMessage(username, message, pfp, image = null, isSender = false) {
 
     const usernameElement = document.createElement('span');
     usernameElement.className = 'username';
-    usernameElement.textContent = username+'   ';
+    usernameElement.textContent = username;
     if (isSender) {
         usernameElement.textContent += ' (You) '; // Add (You) if it's the current user
     }
@@ -245,7 +245,7 @@ function addMessage(username, message, pfp, image = null, isSender = false) {
         imageElement.className = 'chat-image';
 
         imageElement.addEventListener('click', function() {
-            _xY();
+            _Cd();
         });
 
         const caption = document.createElement('div');
