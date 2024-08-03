@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.background img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    margin-top: -60px;
+}
+
+.content {
+    padding: 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sunset gradient */
+    border-radius: 0 0 20px 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+h1 span {
+    font-family: 'Noto Color Emoji';
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p span {
+    font-family: 'Noto Color Emoji';
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 400px; /* Adjust this as needed */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sunset gradient */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px auto;
+    color: #fff; /* White text for readability */
+    outline: 1px solid white;
+}
+
+.username-section {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #333; /* Darker background for input area */
+}
+
+.username-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.username-section input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #222; /* Dark input background */
+    color: #fff; /* White text in input */
+}
+
+.chat-header {
+    background-color: #222; /* Darker header background */
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-messages {
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    position: relative;
+    background: #1c1c1c; /* Dark background for messages */
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #444; /* Darker border for messages */
+    padding: 10px 0;
+    position: relative;
+}
+
+.chat-image {
+    display: block;
+    width: 100px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px; /* Adjust the size as needed */
+    height: auto;
+    pointer-events: none; /* Make sure the icon does not block interactions with the image */
+}
+
+.image-caption {
+    color: #ccc; /* Lighter text color for captions */
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.message-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.pfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.username {
+    margin-left: 5px;
+    margin-right: 4px; /* Increase the gap between username and label */
+}
+
+.date {
+    color: #a64bf4;
+    background-color: #f3e5f5;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.time {
+    margin-top: 5px;
+    color: #ccc; /* Lighter text color for time */
+    font-size: 12px;
+    text-align: right;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #444; /* Darker border for input area */
+    padding: 10px;
+    background: #222; /* Darker background for input area */
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #333; /* Darker background for input */
+    color: #fff; /* White text in input */
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff7e5f; /* Sunset button color */
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #feb47b; /* Lighter sunset button color on hover */
+}
+
+.status-container {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    animation: dropdown 0.5s ease-in-out;
+}
+
+.status-container.show {
+    display: block;
+}
+
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add styles for the creator label */
+.creator-label {
+    color: #a64bf4;
+    background-color: #f3e5f5;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Add styles for the verified label */
+.verified-label {
+    color: #007bff;
+    background-color: #e5f3ff;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Add styles for the unverified label */
+.unverified-label {
+    color: #ff0000;
+    background-color: #ffe5e5;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
